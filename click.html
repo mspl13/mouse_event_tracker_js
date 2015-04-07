@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mouseclick</title>
+	<style type="text/css">
+		*{margin:0;}
+
+		#container-out {
+			height: 200px;
+			width: 200px;
+			overflow: hidden;
+		}
+
+		#container {
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+		}
+
+		#scroll-outer {
+			height: 100%;
+			width: 100%;
+			overflow: auto;
+			padding-right: 15px;
+		}
+
+		#scroll-inner {
+			height: 201px;
+    		width: 100%;
+    		border: 1px solid #ccc;
+    		background-color: #000000;
+		}
+
+		#log-box {
+			height: 200px;
+			width: 200px;
+			border: 1px solid #ccc;
+			overflow: auto;
+		}
+	</style>
+</head>
+<body>
+	<p>left: <span id="left">0</span></p>
+	<p>wheel: <span id="wheel">0</span></p>
+	<p>right: <span id="right">0</span></p>
+	<p>scroll: <span id="scroll">0</span></p>
+	<div id="log-box"></div>
+	<input type="button" value="click" id="btn" onclick="return logClickEvent(event)" oncontextmenu="return logClickEvent(event)">
+	<div id="container-out">
+		<div id="container">
+			<div id="scroll-outer">
+				<div id="scroll-inner"></div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+
+		// http://javascript.info/tutorial/mouse-events
+		// http://www.w3schools.com/jsref/event_onscroll.asp
+
+		document.getElementById('scroll-outer').scrollTop = 1;
+
+		document.getElementById('scroll-outer').onscroll = function() {
+			console.log('scrolling');
+
+			// set counter
+			var old = parseInt(document.getElementById('scroll').innerHTML);
+			var newValue = String(old + 1)
+			document.getElementById('scroll').innerHTML = newValue;
+
+			// get endless scrolling to top
+			var elemOuter = document.getElementById('scroll-outer');
+			var scrollTopValue = elemOuter.scrollTop;
+			console.log('scrollTop scroll-outer: ' + scrollTopValue);
+			if(scrollTopValue == 0){
+				elemOuter.scrollTop = 1;
+				// counter - 1 because javascript scrolls one more time
+				var old = parseInt(document.getElementById('scroll').innerHTML);
+				var newValue = String(old - 1)
+				document.getElementById('scroll').innerHTML = newValue;
+			}
+
+			// resize inner div
+			var elemInner = document.getElementById('scroll-inner');
+			var style = window.getComputedStyle(elemInner);
+			var height = style.getPropertyValue('height');
+			var heightValue = parseInt(height.slice(0, -2));
+			if (heightValue == 201) {
+				document.getElementById('scroll').innerHTML = 0;
+			};
+			console.log('scroll-inner old height: ' + height);
+			console.log('scroll-inner old heightValue: ' + heightValue);
+			var newHeightValue = heightValue + 1;
+			console.log('scroll-inner newHeightValue: ' + newHeightValue);
+			document.getElementById('scroll-inner').style.height = newHeightValue + "px";
+
+			// log to log-box
+			if (heightValue !== 201){
+				document.getElementById('log-box').innerHTML += "<br>-----------" + "<br>scrolled";
+				updateScroll();
+			}
+		}
+
+		function logClickEvent(event){
+			if(event.which == 1) {
+				var old = parseInt(document.getElementById('left').innerHTML);
+				var newValue = String(old + 1)
+				document.getElementById('left').innerHTML = newValue;
+			} else if (event.which == 2) {
+				var old = parseInt(document.getElementById('wheel').innerHTML);
+				var newValue = String(old + 1)
+				document.getElementById('wheel').innerHTML = newValue;
+			} else if (event.which == 3) {
+				var old = parseInt(document.getElementById('right').innerHTML);
+				var newValue = String(old + 1)
+				document.getElementById('right').innerHTML = newValue;
+			}
+			document.getElementById('log-box').innerHTML += "<br>-----------" + "<br>which: " + event.which + "<br>button: " + event.button;
+			updateScroll();
+			return false;
+		}
+
+		function updateScroll() {
+			var logBox = document.getElementById('log-box');
+			logBox.scrollTop = logBox.scrollHeight;
+		}
+	</script>
+</body>
+</html>
