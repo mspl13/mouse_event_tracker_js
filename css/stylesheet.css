@@ -1,0 +1,113 @@
+/*---------------------------------------*/
+/*jumbotron styles*/
+.jumbotron {
+	margin-bottom: 15px;
+}
+
+.jumbotron .container-fluid {
+	text-align: center;
+}
+
+.jumbotron img {
+	max-height: 150px;
+}
+
+/*---------------------------------------*/
+/*column div styles*/
+.col-lg-6 {
+	padding: 10px;
+}
+
+/*---------------------------------------*/
+/*container div styles*/
+.clicker-container, .scroll-container, .counter-container, .logger-container {
+	width: 100%;
+	background-color: #ccc;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.clicker-container h3, .scroll-container h3, .counter-container h3,
+.logger-container h3 {
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+
+/*---------------------------------------*/
+/*clicker and scroll div styles*/
+.clicker, .scroll {
+	height: 200px;
+	width: 50%;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	text-align: center;
+	line-height: 200px;
+}
+
+/*---------------------------------------*/
+/*clicker div styles*/
+.clicker:active {
+	background-color: #000000;
+}
+
+/*---------------------------------------*/
+/*scroll div styles*/
+.scroll {
+	overflow: hidden;
+	position: relative;
+}
+
+.scroll-inner {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: -15px;
+	overflow: auto;
+}
+
+.scroller-action {
+	height: 201px;
+	width: 100%;
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+/*---------------------------------------*/
+/*counter div styles*/
+.counter {
+	padding: 60px 0px 60px 0px;
+	text-align: center;
+}
+
+.counter p {
+	margin: 0px 15px;
+	text-align: center;
+	display: inline-block;
+}
+
+.counter p span {
+	font-size: 3em;
+}
+
+/*---------------------------------------*/
+/*logger div styles*/
+.logger {
+	height: 200px;
+	background-color: #FFFFFF;
+	border: 1px solid black;
+	overflow: auto;
+	text-align: center;
+}
+
+/*---------------------------------------*/
+/*text can not be selected with clicking*/
+.noselect {
+	/*from http://stackoverflow.com/a/4407335/2952875*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
