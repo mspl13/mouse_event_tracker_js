@@ -1,0 +1,1 @@
+This project provides a simple script to track mouse button events. You can see a log and a counter of the events happend.
