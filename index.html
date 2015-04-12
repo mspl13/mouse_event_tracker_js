@@ -7,10 +7,11 @@
 
 	<!-- bootstrap imports -->
 	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.2-dist/css/bootstrap.min.css" />
-	<!--<script src="{% static 'main_layout/css/bootstrap-3.3.2-dist/js/bootstrap.min.js' %}"></script> -->
 
 	<!-- other imports -->
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	<link rel="stylesheet" type="text/css" media="(max-width: 640px)" href="css/max640.css">
+	<link rel="stylesheet" type="text/css" media="(min-width: 641px)" href="css/min640.css">
 </head>
 <body>
 	<div class="jumbotron">
@@ -24,7 +25,7 @@
 			<div class="col-lg-6">
 				<div class="clicker-container">
 					<h3>Clicker</h3>
-					<div class="clicker noselect" id="click-div" onclick="return logClickEvent(event)" oncontextmenu="return logClickEvent(event)">
+					<div class="clicker noselect" id="click-div" onmousedown="return logClickEvent(event)" oncontextmenu="return logClickEvent(event)">
 					</div>
 				</div>
 			</div>
@@ -37,9 +38,6 @@
 							</div>
 					</div>
 				</div>
-				<script type="text/javascript">
-					// document.getElementById('scroller-inner').scrollTop = 1;
-				</script>
 			</div>
 		</div>
 		<div class="row">
@@ -70,6 +68,14 @@
 			</div>
 		</div>
 	</div>
+	<footer class="footer">
+		<div class="container">
+			<ul>
+				<li><a href="https://github.com/mspl13/mouse_event_tracker_js" target="_blank">View on GitHub</a></li>
+				<li><a href="http://spliethoever.de">spliethoever.de</a></li>
+			</ul>
+		</div>
+	</footer>
 	<!-- script needs to be importet here because it can not access the DOM
 	if it is not completely loaded -->
 	<script src="js/event_tracker.js"></script>

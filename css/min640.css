@@ -1,0 +1,15 @@
+/*---------------------------------------*/
+/*footer styles*/
+.footer {
+	text-align: right;
+}
+
+.footer li {
+	padding: 0px 0.5em 0px 0.5em;
+	display: inline;
+	border-right: 1px solid #000000;
+}
+
+.footer li:last-child {
+	border-right: none;	
+}

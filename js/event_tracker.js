@@ -9,6 +9,7 @@ function updateLogBoxScroll(logBox) {
 // clicker-function
 // will be executed if .clicker will be clicked with any mouse key
 function logClickEvent(event) {
+	console.log(event.button);
 	var counterElem;
 	switch(event.which) {
 		case 1:
