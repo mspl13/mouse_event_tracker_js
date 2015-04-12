@@ -1,0 +1,14 @@
+/*---------------------------------------*/
+/*footer styles*/
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 80px;
+}
+
+.footer {
+	height: 80px;
+	margin-top: 0px;
+	line-height: 40px;
+	text-align: center;
+	vertical-align: middle;
+}

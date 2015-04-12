@@ -1,0 +1,153 @@
+/*---------------------------------------*/
+/*jumbotron styles*/
+.jumbotron {
+	margin-bottom: 10px;
+}
+
+.jumbotron .container-fluid {
+	text-align: center;
+}
+
+.jumbotron img {
+	max-height: 130px;
+}
+
+/*---------------------------------------*/
+/*column div styles*/
+.col-lg-6 {
+	padding: 10px;
+}
+
+/*---------------------------------------*/
+/*container div styles*/
+.clicker-container, .scroll-container, .counter-container, .logger-container {
+	width: 100%;
+	background-color: #ccc;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.clicker-container h3, .scroll-container h3, .counter-container h3,
+.logger-container h3 {
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+
+/*---------------------------------------*/
+/*clicker and scroll div styles*/
+.clicker, .scroll {
+	height: 200px;
+	width: 50%;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	text-align: center;
+	line-height: 200px;
+}
+
+/*---------------------------------------*/
+/*clicker div styles*/
+.clicker:active {
+	background-color: #000000;
+}
+
+/*---------------------------------------*/
+/*scroll div styles*/
+.scroll {
+	overflow: hidden;
+	position: relative;
+}
+
+.scroll-inner {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: -15px;
+	overflow: auto;
+}
+
+.scroller-action {
+	height: 201px;
+	width: 100%;
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+/*---------------------------------------*/
+/*counter div styles*/
+.counter {
+	padding: 60px 0px 60px 0px;
+	text-align: center;
+}
+
+.counter p {
+	margin: 0px 15px;
+	text-align: center;
+	display: inline-block;
+}
+
+.counter p span {
+	font-size: 3em;
+}
+
+/*---------------------------------------*/
+/*logger div styles*/
+.logger {
+	height: 200px;
+	background-color: #FFFFFF;
+	border: 1px solid black;
+	overflow: auto;
+	text-align: center;
+}
+
+/*---------------------------------------*/
+/*footer styles*/
+/*--------------------------------------------------*/
+/*soure: http://getbootstrap.com/examples/sticky-footer/*/
+/* Sticky footer styles*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 40px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: #f5f5f5;
+  line-height: 40px;
+}
+
+.footer ul {
+	margin-bottom: 0;
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.footer a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.footer a:hover {
+	text-decoration: underline;
+}
+
+/*---------------------------------------*/
+/*text can not be selected with clicking*/
+.noselect {
+	/*from http://stackoverflow.com/a/4407335/2952875*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
