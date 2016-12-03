@@ -101,3 +101,11 @@ scrollInner.onscroll = function() {
 		updateLogBoxScroll(loggerScroll);
 	}
 }
+
+// ----------------------------------------------------------------------
+// logging functions
+// will be executed if actions below the logger will be clicked
+function clearLog() {
+	document.getElementById('logger-scroll').innerHTML = "";
+	document.getElementById('logger-click').innerHTML = "";
+}

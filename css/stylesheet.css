@@ -33,6 +33,13 @@
 	border-bottom: 1px solid black;
 }
 
+.info-text {
+	text-align: center;
+	font-style: italic;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
 /*---------------------------------------*/
 /*clicker and scroll div styles*/
 .clicker, .scroll {
@@ -98,6 +105,11 @@
 	border: 1px solid black;
 	overflow: auto;
 	text-align: center;
+}
+
+.log-action:hover {
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 /*---------------------------------------*/
