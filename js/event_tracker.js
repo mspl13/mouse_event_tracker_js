@@ -11,19 +11,16 @@ function updateLogBoxScroll(logBox) {
 function logClickEvent(event) {
 	console.log(event.button);
 	var counterElem;
-	switch(event.which) {
-		case 1:
-			counterElem = document.getElementById('counter-left');
-			break;
-		case 2:
-			counterElem = document.getElementById('counter-wheel');
-			break;
-		case 3:
-			counterElem = document.getElementById('counter-right');
-			break;
-		default:
-			return false;
+	if (event.which == 1 || event.button == 0) {
+		counterElem = document.getElementById('counter-left');
+	} else if (event.which == 2 || event.button == 1) {
+		counterElem = document.getElementById('counter-wheel');
+	} else if (event.which == 3 || event.button == 2) {
+		counterElem = document.getElementById('counter-right');
+	} else {
+		return false;
 	}
+
 	counterElem.innerHTML = String(parseInt(counterElem.innerHTML) + 1);
 	var logText = '<p>' + '--------------------'
 					+ '</br>which: ' + event.which
