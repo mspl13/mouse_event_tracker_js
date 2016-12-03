@@ -1,83 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>MouseEventTracker</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+    <title>MouseEventTracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- bootstrap imports -->
-	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.2-dist/css/bootstrap.min.css" />
+    <!-- bootstrap imports -->
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.2-dist/css/bootstrap.min.css" />
 
-	<!-- other imports -->
-	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-	<link rel="stylesheet" type="text/css" media="(max-width: 640px)" href="css/max640.css">
-	<link rel="stylesheet" type="text/css" media="(min-width: 641px)" href="css/min640.css">
-</head>
-<body>
-	<div class="jumbotron">
-		<div class="container-fluid">
-			<img src="media/img/cursor.png" />
-			<h1>MouseEventTracker</h1>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="clicker-container">
-					<h3>Clicker</h3>
-					<div class="clicker noselect" id="click-div" onmousedown="return logClickEvent(event)" oncontextmenu="return false">
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="scroll-container">
-					<h3>Scroller</h3>
-					<div class="scroll noselect">
-							<div class="scroll-inner" id="scroll-inner">
-								<div class="scroller-action" id="scroller-action"></div>
-							</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="counter-container">
-					<h3>Counter</h3>
-					<div class="counter">
-						<p><span id="counter-left">0</span></br>Left</p>
-						<p><span id="counter-wheel">0</span></br>Wheel</p>
-						<p><span id="counter-right">0</span></br>Right</p>
-						<p><span id="counter-scroll">0</span></br>Scroll</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="container logger-container">
-					<h3>Logger</h3>
-					<div class="row">
-						<div class="col-xs-6">
-							<div class="logger" id="logger-click"></div>
-						</div>
-						<div class="col-xs-6">
-							<div class="logger" id="logger-scroll"></div>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-	<footer class="footer">
-		<div class="container">
-			<ul>
-				<li><a href="https://github.com/mspl13/mouse_event_tracker_js" target="_blank">View on GitHub</a></li>
-				<li><a href="http://spliethoever.de">spliethoever.de</a></li>
-			</ul>
-		</div>
-	</footer>
-	<!-- script needs to be importet here because it can not access the DOM
-	if it is not completely loaded -->
-	<script src="js/event_tracker.js"></script>
-</body>
+    <!-- other imports -->
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="(max-width: 640px)" href="css/max640.css">
+    <link rel="stylesheet" type="text/css" media="(min-width: 641px)" href="css/min640.css">
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container-fluid">
+        <img src="media/img/cursor.png" />
+        <h1>MouseEventTracker</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="clicker-container">
+            <h3>Clicker</h3>
+            <div class="clicker noselect" id="click-div" onmousedown="return logClickEvent(event)" oncontextmenu="return false">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="scroll-container">
+            <h3>Scroller</h3>
+            <div class="scroll noselect">
+              <div class="scroll-inner" id="scroll-inner">
+                <div class="scroller-action" id="scroller-action"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="counter-container">
+            <h3>Counter</h3>
+            <div class="counter">
+              <p><span id="counter-left">0</span></br>Left</p>
+              <p><span id="counter-wheel">0</span></br>Wheel</p>
+              <p><span id="counter-right">0</span></br>Right</p>
+              <p><span id="counter-scroll">0</span></br>Scroll</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="container logger-container">
+            <h3>Logger</h3>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="logger" id="logger-click"></div>
+              </div>
+              <div class="col-xs-6">
+                <div class="logger" id="logger-scroll"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <ul>
+          <li><a href="https://github.com/mspl13/mouse_event_tracker_js" target="_blank">View on GitHub</a></li>
+          <li><a href="http://spliethoever.de">spliethoever.de</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- script needs to be importet here because it can not access the DOM
+    if it is not completely loaded -->
+    <script src="js/event_tracker.js"></script>
+  </body>
 </html>
